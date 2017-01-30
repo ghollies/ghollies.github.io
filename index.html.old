@@ -1,0 +1,10 @@
+<html lang="en-US" >
+<head>
+<title> TEST redirect with js </title>
+</head>
+<body>
+Hello!
+<script>
+window.location.replace("https://only-build-cloud-extras-on-ci.appianci.net/suite/design");
+</script>
+</body>

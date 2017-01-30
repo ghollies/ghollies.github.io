@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+<H4>
+You have loged on successfully. Now you will be redirected to your
+application's URL.
+
+<script language="javascript">
+
+purl = window.location.search;
+purlsso = window.location.pathname;
+
+appurl = window.location;
+
+if ( purlsso.indexOf("NOSSO") >= 0 ) {
+  p1 = purl.substring(purl.indexOf('?')+1,purl.length);
+  appurl = window.location.protocol+"//"+window.location.host+p1;
+  document.write("<br>"+window.location.protocol+"//"+window.location.host+p1);
+} else
+  document.write("<br>"+window.location);
+
+window.location = appurl;
+
+</script>
+
+</H4>
+</body>
+</html>
