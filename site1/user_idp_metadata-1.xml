@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<EntityDescriptor entityID="idp-2" xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+   <IDPSSODescriptor WantAuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+      <KeyDescriptor use="signing">
+         <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+            <ds:X509Data>
+               <ds:X509Certificate>MIIDWzCCAkOgAwIBAgIEO2TuCzANBgkqhkiG9w0BAQsFADBeMQswCQYDVQQGEwJ1czELMAkGA1UE
+                  CBMCdmExDzANBgNVBAcTBnJlc3RvbjEPMA0GA1UEChMGYXBwaWFuMQ8wDQYDVQQLEwZhcHBpYW4x
+                  DzANBgNVBAMTBmNsaWVudDAeFw0xNDA3MjExMjI3MTFaFw0xNDEwMTkxMjI3MTFaMF4xCzAJBgNV
+                  BAYTAnVzMQswCQYDVQQIEwJ2YTEPMA0GA1UEBxMGcmVzdG9uMQ8wDQYDVQQKEwZhcHBpYW4xDzAN
+                  BgNVBAsTBmFwcGlhbjEPMA0GA1UEAxMGY2xpZW50MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
+                  CgKCAQEAn1SQDNOTNI7FjOjIrUXcRYcgifNNiT4sTlWar9EN1/5h43kpiN1URmUQ9DD4nGB4apaL
+                  uHIElgkmX5+KJ307qXm+mRh3AzCnKTm2bp/KnKcxBwZDdwAkV0h4U5hAnUadSQxA65J/QK/Nqdff
+                  I7278MJfs7c977vrIn4nf2XjHKO50eUL86CupqBDqtSy38+hwBQZ8WjRP76hYX30N8pYcugXaV4v
+                  5kcboydM4omVynkByiQB2AY+DT3MydiqZkPgwlUr3PEFgwvxonF1yN/TVCEhW2emyIkoxVyYvJv3
+                  D3po6zNo4cxRHTUAsbSF2vzirZ1kVBzCuvnnWzYT+oILgwIDAQABoyEwHzAdBgNVHQ4EFgQUxhui
+                  ihv58Lqk78g9OIl76lUlCP0wDQYJKoZIhvcNAQELBQADggEBAALmaVweB1IZ/ZLl22KIcco34Jp8
+                  A6RAedXRTmyFF++hzV3UNDo/nBGzvsJBnrIZHAFSorlvnfih8GTyD8rxoRAa2OlYmEbpnW0fsSu1
+                  cVBK//uCffCxRTKqqRkq/5p3XE7WM1gX8tKQ8OqUutbbx4dVu2h92MDj8xeOc7odKQWvAF7RNie7
+                  gTMcCbiEG6pp2m6C9DvRLebT1a70X/v/9GcxiR1OClzaGVCfmnvuLngCpLnWDSTY6+vK9e9vzfnq
+                  Td1oHUIeqPFDzJV/rMfU2vkDZDQyvupeuKdTzE5Zud4McBE3cCNc5NiO6AbT2S14wj+TfrarjB5I
+                  BF7cG6dKuZY=
+               </ds:X509Certificate>
+            </ds:X509Data>
+         </ds:KeyInfo>
+      </KeyDescriptor>
+      <ArtifactResolutionService index="0" isDefault="true" Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://multiple-saml-test-drive-1.appianci.net:7001/idp/ArtifactResolver/metaAlias/idp"/>
+      <ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://multiple-saml-test-drive-1.appianci.net:7001/idp/IDPMniRedirect/metaAlias/idp" ResponseLocation="https://multiple-saml-test-drive-1.appianci.net:7001/idp/IDPMniRedirect/metaAlias/idp"/>
+      <ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://multiple-saml-test-drive-1.appianci.net:7001/idp/IDPMniPOST/metaAlias/idp" ResponseLocation="https://multiple-saml-test-drive-1.appianci.net:7001/idp/IDPMniPOST/metaAlias/idp"/>
+      <ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://multiple-saml-test-drive-1.appianci.net:7001/idp/IDPMniSoap/metaAlias/idp"/>
+      <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+      <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+      <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+      <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</NameIDFormat>
+      <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://multiple-saml-test-drive-1.appianci.net:7001/idp/SingleSignOnService/"/>
+      <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://multiple-saml-test-drive-1.appianci.net:7001/idp/SSOSoap/metaAlias/idp"/>
+      <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://multiple-saml-test-drive-1.appianci.net:7001/idp/SingleLogOutService"/>
+      <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://multiple-saml-test-drive-1.appianci.net:7001/idp/SingleLogOutService"/>
+      <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://multiple-saml-test-drive-1.appianci.net:7001/idp"/>
+      <NameIDMappingService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://multiple-saml-test-drive-1.appianci.net:7001/idp/NIMSoap/metaAlias/idp"/>
+      <AssertionIDRequestService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://multiple-saml-test-drive-1.appianci.net:7001/idp/AIDReqSoap/IDPRole/metaAlias/idp"/>
+      <AssertionIDRequestService Binding="urn:oasis:names:tc:SAML:2.0:bindings:URI" Location="https://multiple-saml-test-drive-1.appianci.net:7001/idp/AIDReqUri/IDPRole/metaAlias/idp"/>
+   </IDPSSODescriptor>
+</EntityDescriptor>
